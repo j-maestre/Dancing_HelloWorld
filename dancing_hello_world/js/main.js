@@ -1,5 +1,9 @@
-let myApp
-let stateApp="stop"
+'use-strict';
+
+// let myApp
+// let stateApp="stop"
+
+let global={stateApp:"stop",myApp:""};
 
 let inicia = function(el) {
     // DOM is loaded and ready for manipulation here
@@ -30,7 +34,7 @@ let inicia = function(el) {
 inicia(document.getElementById("ball"));
 
 let start =function start(){
-    stateApp="run"
-    myApp=setInterval(dw,50);
+    global.stateApp="run"
+    global.myApp=setInterval(dw,50);
 }
 docReady(start);
