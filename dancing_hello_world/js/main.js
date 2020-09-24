@@ -2,19 +2,14 @@
 
 export let global={stateApp:"stop",myApp:"",dw:""};
 
-
 import {docReady} from './core/core.js';
 import {stop} from './controlers/stopball.js';
-// import './controlers/stopball.js';
-
-
 
 let inicia = function(el) {
     // DOM is loaded and ready for manipulation here
     let speed = 5; //1 to 100
     let incX = speed * (Math.round(Math.random())?1:-1);
     let incY = speed * (Math.round(Math.random())?1:-1);
-
 
     global.dw=function danceWorld(){
     
@@ -42,8 +37,5 @@ export let start =function start(){
     global.myApp=setInterval(global.dw,20);
     stop();
 }
-// export {start};
 
 docReady(start);
-
-
