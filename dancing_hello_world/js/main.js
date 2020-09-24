@@ -7,7 +7,7 @@ import {stop} from './controlers/stopball.js';
 
 let inicia = function(el) {
     // DOM is loaded and ready for manipulation here
-    let speed = 5; //1 to 100
+    let speed = 1; //1 to 100
     let incX = speed * (Math.round(Math.random())?1:-1);
     let incY = speed * (Math.round(Math.random())?1:-1);
 
@@ -34,7 +34,7 @@ inicia(document.getElementById("ball"));
 
 export let start =function start(){
     global.stateApp="run"
-    global.myApp=setInterval(global.dw,20);
+    global.myApp=setInterval(global.dw,1);
     stop();
 }
 
