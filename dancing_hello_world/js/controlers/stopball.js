@@ -1,6 +1,7 @@
-//import {start} from "../main.js";
+import {start,global} from "../main.js";
 
-document.body.onkeyup = function(e){
+export let stop = function(){document.body.onkeyup = function(e){
+    // alert("olaa");
     if(e.keyCode == 32){
         if (global.stateApp=="run"){
             global.stateApp="stop";
@@ -9,4 +10,6 @@ document.body.onkeyup = function(e){
             start();
         }
     }
-}
+}};
+
+// export default all;
